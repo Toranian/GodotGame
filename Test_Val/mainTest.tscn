@@ -1,13 +1,13 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/World/GrassBackground.png" type="Texture" id=1]
-[ext_resource path="res://Test_Val/TileMap/DirtTileMapWithCollusion.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Test_Val/TileMap/DirtTileMapcollision.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/Player.png" type="Texture" id=3]
 [ext_resource path="res://Player/Player.gd" type="Script" id=4]
 
-[sub_resource type="CapsuleShape2D" id=19]
-radius = 4.27463
-height = 0.0
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 1.61237
+height = 2.90495
 
 [node name="World" type="Node2D"]
 position = Vector2( -0.45031, -0.900627 )
@@ -32,9 +32,10 @@ __meta__ = {
 }
 
 [node name="DirtTileMapWithCollusion" parent="." instance=ExtResource( 2 )]
+scale = Vector2( 1, 1.00491 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
-position = Vector2( 160.153, 97.2537 )
+position = Vector2( 160.858, 94.3321 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_group_": true
@@ -45,8 +46,9 @@ texture = ExtResource( 3 )
 hframes = 60
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-position = Vector2( -0.867065, 8.45659 )
-shape = SubResource( 19 )
+position = Vector2( -1.1713, 10.1298 )
+rotation = 1.55858
+shape = SubResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
